@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/total_usage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--android:id="@+id/go_to_calendar"/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/set_date_limit_view"
+            android:src="@drawable/ic_action_set_limit"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="downloads"
+            android:id="@+id/total_download_view"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="uploads"
+            android:id="@+id/total_upload_view"/>
+
+        <ProgressBar
+            android:layout_width="350dp"
+            android:layout_height="20dp"
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center_horizontal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            />
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_below="@id/select_app_button"
+            android:id="@+id/bar_chart_view"
+            >
+
+        </com.github.mikephil.charting.charts.BarChart>
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:spinnerMode="dropdown"
+            android:src="@drawable/ic_action_change_day"
+            android:id="@+id/theSpinner">
+
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome !"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/total_usage_layout"
+        android:id="@+id/welcome"
+        android:textSize="24sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hasPlan"
+        android:textSize="20sp"
+        android:layout_below="@id/welcome"
+        android:text="You haven't select any Apps yet."
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_app_button"
+        android:textSize="20sp"
+        android:text="Add Apps"
+        android:textAllCaps="false"
+        android:layout_below="@id/hasPlan"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>
